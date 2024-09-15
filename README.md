@@ -1,1 +1,1 @@
-"# odoo-project" 
+# odoo-project

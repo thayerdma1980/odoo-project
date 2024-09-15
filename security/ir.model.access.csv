@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_contractor_unit,contractor unit,model_contractor_unit,,1,1,1,1
+access_project_unit,project unit,model_project_unit,,1,1,1,1
+access_location_unit,location unit,model_location_unit,,1,1,1,1

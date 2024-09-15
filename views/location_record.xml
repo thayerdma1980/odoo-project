@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+
+        <record id="view_location_form" model="ir.ui.view">
+            <field name="name">Location</field>
+            <field name="model">location.unit</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        Name:
+                        <field name="name"/>
+                        Info:
+                        <field name="info"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_location_form" model="ir.actions.act_window">
+            <field name="name">locations</field>
+            <field name="res_model">location.unit</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p>
+                    Add Units To Your Apps.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

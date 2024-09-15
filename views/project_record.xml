@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <record id="view_project_tree" model="ir.ui.view">
+            <field name="name">Project UNIT</field>
+            <field name="model">project.unit</field>
+            <field name="arch" type="xml">
+                <tree string="project info">
+                    <field name="name"/>
+                    <field name="contractor"/>
+                    <field name="location"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_project_form" model="ir.ui.view">
+            <field name="name">Project UNIT</field>
+            <field name="model">project.unit</field>
+            <field name="arch" type="xml">
+                <form string="project info">
+                    <sheet>
+                        <group>
+                            Project Name:
+                            <field name="name"/>
+                            Project Contractor:
+                            <field name="contractor"/>
+                            project Location:
+                            <field name="location"/>
+                            project State:
+                            <field name="state"/>
+                        </group>
+                        <div>
+                            <button name="project_save" type="object" string="Save" class="oe_highlight"/>
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record id="action_project_form" model="ir.actions.act_window">
+            <field name="name">Project</field>
+            <field name="res_model">project.unit</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p>
+                    Add Units To Your Apps.
+                </p>
+            </field>
+        </record>
+        <record id="view_project_kanban" model="ir.ui.view">
+            <field name="name">Project Kanban</field>
+            <field name="model">project.unit</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="state">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click" style="margin-top:5px;border:thin soled #336699">
+                                <div class="oe_kanban_details">
+                                    <b style="color:green">Project Name:</b>
+                                    <field name="name"/>
+                                    <br/>
+                                    <b style="color:blue">Project Info:</b>
+                                    <field name="contractor"/>
+                                    <br/>
+                                    <b style="color:#336699">Project location:</b>
+                                    <field name="location"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

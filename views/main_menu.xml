@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Projects"
+              id="main_menu_project"
+              sequence="0"/>
+
+    <menuitem name="Project"
+              id="menu_project"
+              parent="main_menu_project"
+              action="action_project_form"
+              sequence="0"/>
+    <menuitem name="Contractor"
+              id="menu_contractor"
+              parent="main_menu_project"
+              action="action_contractor_form"
+              sequence="1"/>
+    <menuitem name="Locations"
+              id="menu_location"
+              parent="main_menu_project"
+              action="action_location_form"
+              sequence="2"/>
+
+</odoo>
