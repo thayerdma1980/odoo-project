@@ -1,2 +1,3 @@
+git add .
 git commit -m "tttt"
-git push orign main
+git push origin main
